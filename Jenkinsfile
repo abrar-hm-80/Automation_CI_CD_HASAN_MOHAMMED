@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Maven build') {
       steps {
-        sh './mvnw clean install -P buildDocker'
+        sh './scripts/run_all.sh'
         sh 'docker system prune -a --volumes -f'
       }
     }
