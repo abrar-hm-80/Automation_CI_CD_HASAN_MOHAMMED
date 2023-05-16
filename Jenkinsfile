@@ -111,9 +111,9 @@ stage('Deploiement en staging'){
         }
 
 environment {
-    DOCKER_ID = 'abrarhm'
-    DOCKER_IMAGE = 'datascientestapi'
-    DOCKER_TAG = "v.${BUILD_ID}.0" // we will tag our images with the current build in order to increment the value by 1 with each new build
+    //DOCKER_ID = 'abrarhm'
+    //DOCKER_IMAGE = 'datascientestapi'
+    //DOCKER_TAG = "v.${BUILD_ID}.0" // we will tag our images with the current build in order to increment the value by 1 with each new build
   }
 
 post { // send email when the job has failed
