@@ -29,7 +29,7 @@ pipeline {
         sh 'curl http://localhost:9090'
       }
     }
-  }
+  
 
   stage('Deploiement en dev'){
         environment
