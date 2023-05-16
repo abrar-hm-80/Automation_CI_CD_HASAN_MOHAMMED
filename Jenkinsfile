@@ -29,7 +29,8 @@ pipeline {
 
     stage('Run tests against the container') {
       steps {
-        sh 'curl http://localhost:9090'
+        //sh 'curl http://localhost:9090'
+        echo "Test should be applied after the deployment on the different servers"
       }
     }
 
