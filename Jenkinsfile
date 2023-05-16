@@ -110,27 +110,5 @@ stage('Deploiement en staging'){
             }
         }
 
-environment {
-    //DOCKER_ID = 'abrarhm'
-    //DOCKER_IMAGE = 'datascientestapi'
-    //DOCKER_TAG = "v.${BUILD_ID}.0" // we will tag our images with the current build in order to increment the value by 1 with each new build
-  }
-
-post { // send email when the job has failed
-    // ..
-    failure {
-        echo "This will run if the job failed"
-       // mail(to: 'abrar.hasan1@protonmail.com'
-          //   subject: "${env.JOB_NAME} - Build # ${env.BUILD_ID} has failed",
-            // body: "For more info on the pipeline failure, check out the console output at ${env.BUILD_URL}"
-    }
-    // ..
-     always {
-      sh 'docker compose down --remove-orphans -v'
-      sh 'docker compose ps'
-    }
-
-  }
-}
 }
 
