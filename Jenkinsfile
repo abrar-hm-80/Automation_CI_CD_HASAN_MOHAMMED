@@ -114,10 +114,9 @@ echo "List the URL and send it via email to team / stakeholders"
 
       }
     }
-environment {
+  }
+  environment {
     DOCKER_CREDENTIALS = credentials("DOCKER_CREDS")
     KUBECONFIG = "$WORKSPACE/certs/config"
-  }
-    
   }
 }
