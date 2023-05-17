@@ -44,9 +44,7 @@ pipeline {
 rm -Rf .kube
 mkdir .kube
 ls
-sudo touch .kube/config
-sudo chmod 777 .kube/config
-cat $KUBECONFIG > .kube/config
+cat $KUBECONFIG > ~/.kube/config
 // cp fastapi/values.yaml values.yml
 // cat values.yml
 // sed -i "s+tag.*+tag: ${DOCKER_TAG}+g" values.yml
@@ -67,9 +65,7 @@ cat $KUBECONFIG > .kube/config
 rm -Rf .kube
 mkdir .kube
 ls
-sudo touch .kube/config
-sudo chmod 777 .kube/config
-cat $KUBECONFIG > .kube/config
+cat $KUBECONFIG > ~/.kube/config
 '''
         }
 
@@ -86,9 +82,7 @@ cat $KUBECONFIG > .kube/config
 rm -Rf .kube
 mkdir .kube
 ls
-sudo touch .kube/config
-sudo chmod 777 .kube/config
-cat $KUBECONFIG > .kube/config
+cat $KUBECONFIG > ~/.kube/config
 '''
         }
 
@@ -110,9 +104,7 @@ rm -Rf .kube
 mkdir .kube
 ls
 echo "Deploiement en prod..."
-sudo touch .kube/config
-sudo chmod 777 .kube/config
-cat $KUBECONFIG > .kube/config
+cat $KUBECONFIG > ~/.kube/config
 //cp fastapi/values.yaml values.yml
 // cat values.yml
 // sed -i "s+tag.*+tag: ${DOCKER_TAG}+g" values.yml
