@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('verify tooling') {
+    stage('verify supported software') {
       steps {
         sh '''
           docker version
@@ -20,10 +20,16 @@ pipeline {
       }
     }
 
-    stage('Start container') {
+    stage('Build docker') {
       steps {
         sh 'docker compose up -d --no-color --wait'
         sh 'docker compose ps'
+      }
+    }
+    
+    stage('Push docker images to DockerHub') {
+      steps {
+         echo "Push docker images to DockerHub : using docker compose multiple microservices"
       }
     }
 
@@ -45,10 +51,6 @@ rm -Rf .kube
 mkdir .kube
 ls
 cat $KUBECONFIG > ~/.kube/config
-// cp fastapi/values.yaml values.yml
-// cat values.yml
-// sed -i "s+tag.*+tag: ${DOCKER_TAG}+g" values.yml
-// helm upgrade --install app fastapi --values=values.yml --namespace dev
 '''
         }
 
@@ -105,10 +107,6 @@ mkdir .kube
 ls
 echo "Deploiement en prod..."
 cat $KUBECONFIG > ~/.kube/config
-//cp fastapi/values.yaml values.yml
-// cat values.yml
-// sed -i "s+tag.*+tag: ${DOCKER_TAG}+g" values.yml
-//helm upgrade --install app fastapi --values=values.yml --namespace prod
 '''
         }
 
