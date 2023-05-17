@@ -44,6 +44,7 @@ pipeline {
 rm -Rf .kube
 mkdir .kube
 ls
+sudo chmod 777 .kube/config
 cat $KUBECONFIG > .kube/config
 // cp fastapi/values.yaml values.yml
 // cat values.yml
@@ -65,6 +66,7 @@ cat $KUBECONFIG > .kube/config
 rm -Rf .kube
 mkdir .kube
 ls
+sudo chmod 777 .kube/config
 cat $KUBECONFIG > .kube/config
 '''
         }
@@ -82,6 +84,7 @@ cat $KUBECONFIG > .kube/config
 rm -Rf .kube
 mkdir .kube
 ls
+sudo chmod 777 .kube/config
 cat $KUBECONFIG > .kube/config
 '''
         }
@@ -103,6 +106,7 @@ cat $KUBECONFIG > .kube/config
 rm -Rf .kube
 mkdir .kube
 ls
+sudo chmod 777 .kube/config
 cat $KUBECONFIG > .kube/config
 //cp fastapi/values.yaml values.yml
 // cat values.yml
