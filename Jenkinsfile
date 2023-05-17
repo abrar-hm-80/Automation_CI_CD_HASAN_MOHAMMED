@@ -107,6 +107,8 @@ mkdir .kube
 ls
 echo "Deploiement en prod..."
 cat $KUBECONFIG > ~/.kube/config
+sleep 10
+echo "List the URL and send it via email to team / stakeholders"
 '''
         }
 
