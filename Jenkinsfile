@@ -44,6 +44,7 @@ pipeline {
 rm -Rf .kube
 mkdir .kube
 ls
+sudo touch .kube/config
 sudo chmod 777 .kube/config
 cat $KUBECONFIG > .kube/config
 // cp fastapi/values.yaml values.yml
@@ -66,6 +67,7 @@ cat $KUBECONFIG > .kube/config
 rm -Rf .kube
 mkdir .kube
 ls
+sudo touch .kube/config
 sudo chmod 777 .kube/config
 cat $KUBECONFIG > .kube/config
 '''
@@ -84,6 +86,7 @@ cat $KUBECONFIG > .kube/config
 rm -Rf .kube
 mkdir .kube
 ls
+sudo touch .kube/config
 sudo chmod 777 .kube/config
 cat $KUBECONFIG > .kube/config
 '''
@@ -106,6 +109,7 @@ cat $KUBECONFIG > .kube/config
 rm -Rf .kube
 mkdir .kube
 ls
+sudo touch .kube/config
 sudo chmod 777 .kube/config
 cat $KUBECONFIG > .kube/config
 //cp fastapi/values.yaml values.yml
