@@ -109,6 +109,7 @@ cat $KUBECONFIG > .kube/config
 rm -Rf .kube
 mkdir .kube
 ls
+echo "Deploiement en prod..."
 sudo touch .kube/config
 sudo chmod 777 .kube/config
 cat $KUBECONFIG > .kube/config
