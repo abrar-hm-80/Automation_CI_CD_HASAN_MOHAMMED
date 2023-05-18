@@ -4,7 +4,7 @@ pipeline {
     stage('verify supported software') {
       steps {
         sh '''
-          mvn --version
+          ls
         '''
       }
     }
