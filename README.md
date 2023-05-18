@@ -234,3 +234,6 @@ Run the Jenkins pipeline: Trigger the Jenkins pipeline either manually or by set
 Monitor the deployment: Monitor the Jenkins job console output for any errors or issues during the deployment process. Additionally, you can monitor your Kubernetes cluster and logs to ensure that the microservices are running correctly.
 
 By following these steps, you can automate the deployment of your Java Spring Boot microservices using Docker and Kubernetes with Jenkins.
+
+--------------------
+
