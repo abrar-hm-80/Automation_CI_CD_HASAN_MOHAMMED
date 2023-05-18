@@ -4,7 +4,7 @@ pipeline {
     stage('verify supported software') {
       steps {
         sh '''
-          sudo service docker start
+         service docker start
         '''
       }
     }
