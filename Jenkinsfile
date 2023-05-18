@@ -4,7 +4,6 @@ pipeline {
     stage('verify supported software') {
       steps {
         sh '''
-          docker info
           mvn --version
         '''
       }
