@@ -235,5 +235,5 @@ Monitor the deployment: Monitor the Jenkins job console output for any errors or
 
 By following these steps, you can automate the deployment of your Java Spring Boot microservices using Docker and Kubernetes with Jenkins.
 
---------------------
+----------------------
 
