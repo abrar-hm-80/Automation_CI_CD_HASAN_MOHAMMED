@@ -6,8 +6,6 @@ pipeline {
         sh '''
           docker version
           docker info
-          docker compose version 
-          curl --version
           mvn --version
         '''
       }
@@ -26,17 +24,16 @@ pipeline {
         sh 'docker compose ps'
       }
     }
-    
+
     stage('Push docker images to DockerHub') {
       steps {
-         echo "Push docker images to DockerHub : using docker compose multiple microservices"
+        echo 'Push docker images to DockerHub : using docker compose multiple microservices'
       }
     }
 
     stage('Run tests against the container') {
       steps {
-        //sh 'curl http://localhost:9090'
-        echo "Test should be applied after the deployment on the different servers"
+        echo 'Test should be applied after the deployment on the different servers'
       }
     }
 
@@ -114,5 +111,6 @@ echo "List the URL and send it via email to team / stakeholders"
 
       }
     }
+
   }
 }
