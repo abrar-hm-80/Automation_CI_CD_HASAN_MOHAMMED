@@ -69,41 +69,7 @@ cat $KUBECONFIG > ~/.kube/config
       }
     }
 
-    stage('Deploiement en Test') {
-      environment {
-        KUBECONFIG = credentials('config')
-      }
-      steps {
-        script {
-          sh '''
-rm -Rf .kube
-mkdir .kube
-ls
-cat $KUBECONFIG > ~/.kube/config
-'''
-        }
-
-      }
-    }
-
-    stage('Deploiement en staging') {
-      environment {
-        KUBECONFIG = credentials('config')
-      }
-      steps {
-        script {
-          sh '''
-rm -Rf .kube
-mkdir .kube
-ls
-cat $KUBECONFIG > ~/.kube/config
-'''
-        }
-
-      }
-    }
-
-    stage('Deploiement en prod') {
+    stage('Deploiement en develop prod') {
       environment {
         KUBECONFIG = credentials('config')
       }
