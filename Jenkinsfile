@@ -58,9 +58,8 @@ pipeline {
 echo "List the URL and send it via email to team / stakeholders"
 '''
         }
-
       }
-    }
+    
 
   }
 }
