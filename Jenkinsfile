@@ -57,7 +57,7 @@ pipeline {
       steps {
         script {
           echo 'Created only one docker compose to default for docker environment'
-         
+         sh 'sleep 50'
         }
 
       }
