@@ -52,14 +52,21 @@ pipeline {
       }
     }
 
-    stage('Deploiement en develop prod') {
+  stage('Deploiement en develop') {
+     
+      steps {
         script {
-          sh '''
-echo "List the URL and send it via email to team / stakeholders"
-'''
+          echo 'Created only one docker compose to default for docker environment'
+         
         }
-      }
-    
 
+      }
+    }
+
+  }
+  environment {
+    DOCKER_ID = 'abrarhm'
+    DOCKER_IMAGE = 'springcommunity'
+    DOCKER_TAG = "v.${BUILD_ID}.0" // we will tag our images with the current build in order to increment the value by 1 with each new build
   }
 }
