@@ -52,40 +52,9 @@ pipeline {
       }
     }
 
-    stage('Deploiement en dev') {
-      environment {
-        KUBECONFIG = credentials('config')
-      }
-      steps {
-        script {
-          sh '''
-rm -Rf .kube
-mkdir .kube
-ls
-cat $KUBECONFIG > ~/.kube/config
-'''
-        }
-
-      }
-    }
-
     stage('Deploiement en develop prod') {
-      environment {
-        KUBECONFIG = credentials('config')
-      }
-      steps {
-        timeout(time: 15, unit: 'MINUTES') {
-          input(message: 'Do you want to deploy in production ?', ok: 'Yes')
-        }
-
         script {
           sh '''
-rm -Rf .kube
-mkdir .kube
-ls
-echo "Deploiement en prod..."
-cat $KUBECONFIG > ~/.kube/config
-sleep 10
 echo "List the URL and send it via email to team / stakeholders"
 '''
         }
