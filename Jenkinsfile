@@ -48,8 +48,7 @@ pipeline {
         sh 'curl -Is http://localhost:9090 | head -n 1'
         echo 'Grafana Dashboards - http://localhost:3000'
         sh 'curl -Is http://localhost:3000 | head -n 1'
-        echo 'Prometheus - http://localhost:9091'
-        sh 'curl -Is http://localhost:9091 | head -n 1'
+        
       }
     }
 
